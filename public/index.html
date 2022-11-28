@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./source/style/index.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="filter">
+            <button class="filter__all">Все</button>
+            <button class="filter__true">Сделаные</button>
+            <button class="filter__false active">Не сделаные</button>
+        </div>
+
+        <div class="cards">
+            <div class="preloader__wrapper">
+                <span class="spinner spinner-large spinner-blue spinner-slow"></span>
+            </div>
+
+            <div class="cards__all hidden">
+
+            </div>
+            <div class="cards__true hidden"></div>
+            <div class="cards__false"></div>
+        </div>
+
+        <div class="cards__add">
+            <button class="add__btn">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" width="2" height="12" rx="0.8" fill="#DD4B39"/><rect y="7" width="2" height="12" rx="0.8" transform="rotate(-90 0 7)" fill="#DD4B39"/>
+                </svg>
+                Добавить задачу
+            </button>
+            <div class="add-card hidden">
+                <form class="add-card__body">
+                    <input type="text" placeholder="Семейный обед в воскресенье в 11:00" class="add-card__title">
+                    <input type="text" placeholder="Описание" class="add-card__desc">
+                    <div class="add-card__group">
+                        <input class="add-card__sphere" placeholder="Сфера"></input>
+                        <input type="date" class="add-card__date">
+                    </div>
+                </form>
+                <div class="add-card__btns">
+                    <button class="add-card__cancel">Отмена</button>
+                    <button class="add-card__add">Добавить</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="notification-comp notification hidden">
+            <div class="notification-comp__body">
+                <div class="notification-comp__title">
+                    Задача успешна создана
+                </div>
+            </div>
+        </div>
+        <div class="notification-error notification hidden">
+            <div class="notification-error__body">
+                <div class="notification__title">
+                    Не удалось создать задачу
+                </div>
+            </div>
+        </div>
+        <div class="notification-edit notification hidden">
+            <div class="notification-edit__body">
+                <div class="notification-edit__title">
+                    Задача изменина
+                </div>
+            </div>
+        </div>
+        <div class="notification-delete notification hidden">
+            <div class="notification-delete__body">
+                <div class="notification-delete__title">
+                    Задача удалена
+                </div>
+            </div>
+        </div>
+        <div class="notification-wrong notification hidden">
+            <div class="notification-wrong__body">
+                <div class="notification-wrong__title">
+                    Задача уже выполнена
+                </div>
+            </div>
+        </div>
+        <div class="notification-completed notification hidden">
+        <div class="notification-completed__body">
+            <div class="notification-completed__title">
+                Задача выполнена
+            </div>
+        </div>
+    </div>
+
+        <div class="edit-task hidden">
+                <div class="edit-task__wrapper">
+                    <form class="edit-task__body">
+                        <input type="text" placeholder="Семейный обед в воскресенье в 11:00" class="edit-task__title">
+                        <input type="text" placeholder="Описание" class="edit-task__desc">
+                        <div class="edit-task__group">
+                            <input class="edit-task__sphere" placeholder="Сфера"></input>
+                            <input type="date" class="edit-task__date">
+                        </div>
+                    </form>
+                    <div class="edit-task__btn">
+                        <button class="edit-task__cancel">Отмена</button>
+                        <button class="edit-task__add">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <script src="./source/js/index.js" type="module"></script>
+    <script src="./source/js/components/tabListener.js" type="module"></script>
+    <script src="./source/js/components/createTasks.js" type="module"></script>
+    <script src="./source/js/components/deleteTasks.js" type="module"></script>
+    <script src="./source/js/components/editTasks.js" type="module"></script>
+    <script src="./source/js/components/completedTask.js" type="module"></script>
+    <script src="./source/js/components/menuTasks.js" type="module"></script>
+</body>
+</html>
